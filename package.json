@@ -33,6 +33,7 @@
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-replace": "^5.0.5",
+    "@sanity/semantic-release-preset": "^4.1.6",
     "@types/eslint": "^8.44.8",
     "@typescript-eslint/parser": "^6.13.1",
     "@typescript-eslint/rule-tester": "^6.13.1",
