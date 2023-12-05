@@ -4,7 +4,7 @@ This ESLint plugin provides rules to enforce specific code standards in internat
 
 ## Installation
 
-> **👋 Note:** We recommend installing [`@sanity/eslint-config-i18n`](https://github.com/sanity-io/eslint-config-i18n) which comes bundled with other plugins that are useful for localizing your Studio.
+> **👋 Note:** We **highly** recommend installing [`@sanity/eslint-config-i18n`](https://github.com/sanity-io/eslint-config-i18n) instead which comes bundled with other plugins that are useful for localizing your Studio.
 
 Ensure [ESLint](https://eslint.org/) is installed and initialized then install the following package:
 
