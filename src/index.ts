@@ -2,6 +2,7 @@ import type { ESLint } from 'eslint';
 
 import { noAttributeStringLiterals } from './no-attribute-string-literals';
 import { noAttributeTemplateLiterals } from './no-attribute-template-literals';
+import { noI18NextImport } from './no-i18next-import';
 
 const plugin: ESLint.Plugin = {
   meta: {
@@ -11,6 +12,7 @@ const plugin: ESLint.Plugin = {
   rules: {
     'no-attribute-string-literals': noAttributeStringLiterals,
     'no-attribute-template-literals': noAttributeTemplateLiterals,
+    'no-i18next-import': noI18NextImport,
   },
 };
 

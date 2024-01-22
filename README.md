@@ -21,6 +21,7 @@ module.exports = {
   rules: {
     '@sanity/i18n/no-attribute-string-literals': 'error',
     '@sanity/i18n/no-attribute-template-literals': 'error',
+    '@sanity/i18n/no-i18next-import': 'error',
   },
 };
 ```
@@ -112,6 +113,29 @@ Examples of **correct** code for this rule:
 <MyComponent booleanAttr numberAttr={5}>
 ```
 
+### `no-i18next-import`
+
+This rule finds imports of the `i18next` and `react-i18next` package. While these packages are (currently) used as dependencies of `sanity`, this is considered an implementation detail and should not be relied upon. Instead, you should import any i18n utility/helper from the `sanity` module directly.
+
+Examples of **incorrect** code for this rule:
+
+```js
+// 🛑 importing from `react-i18next``
+import { useTranslation } from 'react-i18next';
+```
+
+```js
+// 🛑 requiring from `react-i18next``
+const { Trans } = require('react-i18next');
+```
+
+Examples of **correct** code for this rule:
+
+```js
+// ✅ requiring from `sanity`
+const { Translate } = require('sanity');
+```
+
 ## Usage
 
 In your ESLint config, add `"@sanity/i18n"` to the list of plugins and enable the rules:
@@ -149,6 +173,7 @@ module.exports = {
         mode: 'extend',
       },
     ],
+    '@sanity/i18n/no-i18next-import': 'error',
   },
 };
 ```
